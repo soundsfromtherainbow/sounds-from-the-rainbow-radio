@@ -19,7 +19,7 @@
     <meta property="og:title" content="Sounds from the Rainbow — Radio" />
     <meta
       property="og:description"
-      content="A radio-style stream of music, soundscapes, voices, kitchens, and campfires captured over decades at Rainbow gatherings."
+      content="A radio-style stream of music, stories, snippets, and soundscapes captured over decades at Rainbow gatherings."
     />
     <meta
       property="og:image"
