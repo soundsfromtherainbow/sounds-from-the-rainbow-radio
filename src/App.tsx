@@ -564,6 +564,44 @@ export default function App() {
     <div style={{ padding: 24, fontFamily: "sans-serif", maxWidth: 1040 }}>
       <h1>🎧 Sounds from the Rainbow — Radio</h1>
 
+<section
+  style={{
+    marginTop: 12,
+    marginBottom: 16,
+    padding: 14,
+    borderRadius: 12,
+    border: "1px solid rgba(0,0,0,0.12)",
+    background: "rgba(0,0,0,0.03)",
+  }}
+>
+  <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 6 }}>
+    Sounds from the Rainbow — Radio
+  </div>
+
+  <p style={{ margin: 0, lineHeight: 1.45 }}>
+    A continuously streaming, radio-style listening experience drawn from the{" "}
+    <em>Sounds from the Rainbow (2000–2025)</em> field recording archive.
+  </p>
+
+  <p style={{ marginTop: 10, marginBottom: 0, lineHeight: 1.45 }}>
+    This station shuffles thousands of recordings — music, soundscapes, voices,
+    kitchens, campfires — captured over decades at Rainbow gatherings across the
+    world.
+  </p>
+
+  <p style={{ marginTop: 10, marginBottom: 0, lineHeight: 1.45 }}>
+    Source archive:{" "}
+    <a
+      href="https://archive.org/details/soundsfromtherainbow2000-2025"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Internet Archive → soundsfromtherainbow2000-2025
+    </a>
+  </p>
+</section>
+
+
       <p>
         Internet Archive item: <b>{IA_IDENTIFIER}</b>
       </p>
