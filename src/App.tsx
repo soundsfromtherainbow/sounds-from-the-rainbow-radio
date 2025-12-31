@@ -253,13 +253,6 @@ export default function App() {
   const [status, setStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
   const [error, setError] = useState("");
 
-  // Debug
-  const [debug, setDebug] = useState<{
-    totalFiles: number;
-    audioByExt: number;
-    sampleNames: string[];
-  } | null>(null);
-
   // Station
   const [stationName, setStationName] = useState<string>(STATIONS[0].name);
   const station = useMemo(
@@ -357,11 +350,6 @@ export default function App() {
         }))
         .filter((f) => audioExt.test(f.name));
 
-      setDebug({
-        totalFiles: files.length,
-        audioByExt: audio.length,
-        sampleNames: audio.slice(0, 25).map((f) => `${f.name} (${f.format || "no format"})`),
-      });
 
       if (!audio.length) throw new Error("No audio files found by extension.");
 
@@ -691,18 +679,6 @@ export default function App() {
           </div>
           <div style={{ fontSize: 12, opacity: 0.6, marginTop: 4 }}>
             Path: {nowPlaying.fileName}
-          </div>
-        </div>
-      )}
-
-      {/* Debug */}
-      {debug && (
-        <div style={{ background: "#f6f6f6", padding: 12, borderRadius: 8, marginTop: 18 }}>
-          <div><b>Debug</b></div>
-          <div>Total files from IA: {debug.totalFiles}</div>
-          <div>Audio by extension: {debug.audioByExt}</div>
-          <div style={{ marginTop: 8, fontSize: 12, whiteSpace: "pre-wrap" }}>
-            {debug.sampleNames.join("\n")}
           </div>
         </div>
       )}
